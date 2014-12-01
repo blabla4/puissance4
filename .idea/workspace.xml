@@ -1,16 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6e069ae5-ca5e-4277-a5fd-850516637cb4" name="Default" comment="">
-      <change type="DELETED" beforePath="C:\git\puissance4\puissance4-web\src\main\webapp\index.jsp" afterPath="" />
-      <change type="DELETED" beforePath="C:\git\puissance4\puissance4-web\target\puissance4-web\index.jsp" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/puissance4-web/src/main/java/org/isen/j2e/puissance4/HelloServlet.java" afterPath="$PROJECT_DIR$/puissance4-web/src/main/java/org/isen/j2e/puissance4/HelloServlet.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/puissance4-core/target/maven-archiver/pom.properties" afterPath="$PROJECT_DIR$/puissance4-core/target/maven-archiver/pom.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/puissance4-web/target/maven-archiver/pom.properties" afterPath="$PROJECT_DIR$/puissance4-web/target/maven-archiver/pom.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/puissance4-web/pom.xml" afterPath="$PROJECT_DIR$/puissance4-web/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/puissance4-web/puissance4-web.iml" afterPath="$PROJECT_DIR$/puissance4-web/puissance4-web.iml" />
-    </list>
+    <list default="true" id="6e069ae5-ca5e-4277-a5fd-850516637cb4" name="Default" comment="" />
     <ignored path="puissance4.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -575,15 +566,15 @@
       <created>1417455741768</created>
       <option name="number" value="Default" />
       <updated>1417455741768</updated>
-      <workItem from="1417455744642" duration="5915000" />
+      <workItem from="1417455744642" duration="6041000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5915000" />
+    <option name="totallyTimeSpent" value="6041000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1378" height="754" extended-state="1" />
+    <frame x="-8" y="-8" width="1378" height="754" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
