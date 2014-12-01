@@ -5,20 +5,13 @@
     <script>
         function GreetingController($scope, $http)
         {
-            $scope.user = {};
-
-            $scope.createUser = function()
+            $http({
+                method: 'GET',
+                url: 'http://localhost:8080/puissance4-web/hello'
+            }).success(function (data)
             {
-                $http({
-                    method: 'GET',
-                    url: 'http://localhost:8080/puissance4-web/hello',
-                    headers: {'Content-Type': 'plain/text'},
-                    data:  $scope.user
-                }).success(function (data)
-                {
-                    $scope.status=data;
-                });
-            };
+                $scope.status=data;
+            });
         }
     </script>
 </head>
