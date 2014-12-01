@@ -1,0 +1,7 @@
+org\isen\j2e\puissance4\Board.class
+org\isen\j2e\puissance4\ColumnFullException.class
+org\isen\j2e\puissance4\Game.class
+org\isen\j2e\puissance4\NullColumnException.class
+org\isen\j2e\puissance4\BoardFullException.class
+org\isen\j2e\puissance4\GameException.class
+org\isen\j2e\puissance4\Coin.class
