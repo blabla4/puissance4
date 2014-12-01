@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/puissance4.iml" filepath="$PROJECT_DIR$/puissance4.iml" />
+      <module fileurl="file://$PROJECT_DIR$/puissance4-core/puissance4-core.iml" filepath="$PROJECT_DIR$/puissance4-core/puissance4-core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/puissance4-web/puissance4-web.iml" filepath="$PROJECT_DIR$/puissance4-web/puissance4-web.iml" />
+    </modules>
+  </component>
+</project>

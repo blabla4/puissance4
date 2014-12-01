@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="puissance4-web:war">
+    <output-path>$PROJECT_DIR$/puissance4-web/target</output-path>
+    <root id="archive" name="puissance4-web.war">
+      <element id="artifact" artifact-name="puissance4-web:war exploded" />
+    </root>
+  </artifact>
+</component>

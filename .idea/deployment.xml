@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PublishConfigData">
+    <serverData>
+      <paths name="server">
+        <serverdata>
+          <mappings>
+            <mapping deploy="\" local="$PROJECT_DIR$" web="/puissance4" />
+            <mapping deploy="\" local="$PROJECT_DIR$/puissance4-web" web="/puissance4" />
+            <mapping deploy="\" local="$PROJECT_DIR$/puissance4-core" web="/puissance4" />
+          </mappings>
+        </serverdata>
+      </paths>
+    </serverData>
+  </component>
+</project>
