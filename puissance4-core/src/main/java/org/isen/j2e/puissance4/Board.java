@@ -13,6 +13,24 @@ public class Board {
         }
     }
 
+    public String getBoardAsText() {
+        String text = "";
+        text += "<br />";
+        for (int i = 0; i < ROW_NUMBER; i++) {
+            for (int j = 0; j < COL_NUMBER; j++) {
+                if (grid[i][j] == Coin.BLUE) {
+                    text += "| X ";
+                } else if (grid[i][j] == Coin.RED) {
+                    text += "| O ";
+                } else {
+                    text += "|   ";
+                }
+            }
+            text += "|<br />";
+        }
+        return text;
+    }
+
     public void display() {
         System.out.print("\n");
         for (int i = 0; i < ROW_NUMBER; i++) {

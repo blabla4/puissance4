@@ -12,6 +12,10 @@
             {
                 $scope.status=data;
             });
+            $scope.click = function() {
+                console.log("ok");
+                $scope.status="click";
+            };
         }
     </script>
 </head>
@@ -19,6 +23,7 @@
 <body>
 <div ng-controller="GreetingController">
     {{ status }}
+    <button ng-click="click()">Click me</button>
 </div>
 </body>
 

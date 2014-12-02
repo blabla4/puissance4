@@ -9,6 +9,9 @@
         <element id="directory" name="lib">
           <element id="library" level="project" name="Maven: commons-lang:commons-lang:2.6" />
           <element id="library" level="project" name="Maven: javax.ws.rs:javax.ws.rs-api:2.0" />
+          <element id="archive" name="puissance4-core-1.0-SNAPSHOT.jar">
+            <element id="module-output" name="puissance4-core" />
+          </element>
         </element>
       </element>
       <element id="directory" name="META-INF">

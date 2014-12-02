@@ -10,14 +10,20 @@ import java.io.PrintWriter;
 
 @WebServlet("/hello")
 public class HelloServlet extends HttpServlet {
-
+    public Game game = new Game();
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         resp.setContentType("text/html");
         PrintWriter out = resp.getWriter();
-        out.print("test");
+        out.print(game.getBoard().getBoardAsText());
         out.flush();
         out.close();
         //this.getServletContext().getRequestDispatcher( "/WEB-INF/app.jsp" ).forward( req, resp );
+    }
+
+    @Override
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException
+    {
+
     }
 }
