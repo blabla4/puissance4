@@ -15,7 +15,7 @@ public class Board {
 
     public String getBoardAsText() {
         String text = "";
-        text += "<br />";
+        text += "<br>";
         for (int i = 0; i < ROW_NUMBER; i++) {
             for (int j = 0; j < COL_NUMBER; j++) {
                 if (grid[i][j] == Coin.BLUE) {
@@ -23,10 +23,10 @@ public class Board {
                 } else if (grid[i][j] == Coin.RED) {
                     text += "| O ";
                 } else {
-                    text += "|   ";
+                    text += "| _ ";
                 }
             }
-            text += "|<br />";
+            text += "|<br>";
         }
         return text;
     }

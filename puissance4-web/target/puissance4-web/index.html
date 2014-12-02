@@ -3,28 +3,33 @@
 <head>
     <script src="js/angular/angular.min.js"></script>
     <script>
-        function GreetingController($scope, $http)
+        function GreetingController($scope, $sce, $http)
         {
-            $http({
-                method: 'GET',
-                url: 'http://localhost:8080/puissance4-web/hello'
-            }).success(function (data)
+            $scope.user = {};
+            $scope.createUser = function()
             {
-                $scope.status=data;
-            });
-            $scope.click = function() {
-                console.log("ok");
-                $scope.status="click";
+                $http({
+                    method: 'POST',
+                    url: 'http://localhost:8080/puissance4-web/hello',
+                    headers: {'Content-Type': 'application/json'},
+                    data:  $scope.user
+                }).success(function (data)
+                {
+                    $scope.status= $sce.trustAsHtml(data);
+                });
             };
         }
     </script>
 </head>
 
 <body>
-<div ng-controller="GreetingController">
-    {{ status }}
-    <button ng-click="click()">Click me</button>
-</div>
+<form ng-controller="GreetingController" ng-submit="createUser()">
+    <label>Column: </label>
+    <input type="text" id="name" name="name" ng-model="user.name">
+    <button class="btn btn-primary">Play</button>
+    <br/>
+    <div ng-bind-html="status"></div>
+</form>
 </body>
 
 </html>

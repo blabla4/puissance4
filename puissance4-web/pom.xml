@@ -33,6 +33,11 @@
       <groupId>org.isen.j2e.puissance4</groupId>
       <artifactId>puissance4-core</artifactId>
     </dependency>
+    <dependency>
+      <groupId>com.googlecode.json-simple</groupId>
+      <artifactId>json-simple</artifactId>
+      <version>1.1</version>
+    </dependency>
   </dependencies>
   <build>
     <finalName>puissance4-web</finalName>

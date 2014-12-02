@@ -12,6 +12,7 @@
           <element id="archive" name="puissance4-core-1.0-SNAPSHOT.jar">
             <element id="module-output" name="puissance4-core" />
           </element>
+          <element id="library" level="project" name="Maven: com.googlecode.json-simple:json-simple:1.1" />
         </element>
       </element>
       <element id="directory" name="META-INF">
