@@ -1,35 +1,81 @@
 <!DOCTYPE html>
-<html ng-app>
-<head>
-    <script src="js/angular/angular.min.js"></script>
-    <script>
-        function GreetingController($scope, $sce, $http)
-        {
-            $scope.user = {};
-            $scope.createUser = function()
-            {
-                $http({
-                    method: 'POST',
-                    url: 'http://localhost:8080/puissance4-web/hello',
-                    headers: {'Content-Type': 'application/json'},
-                    data:  $scope.user
-                }).success(function (data)
-                {
-                    $scope.status= $sce.trustAsHtml(data);
-                });
-            };
-        }
-    </script>
-</head>
+<html>
+    <head>
+        <script>
+            var state = 0;
 
-<body>
-<form ng-controller="GreetingController" ng-submit="createUser()">
-    <label>Column: </label>
-    <input type="text" id="name" name="name" ng-model="user.name">
-    <button class="btn btn-primary">Play</button>
-    <br/>
-    <div ng-bind-html="status"></div>
-</form>
-</body>
+            function won(winner) {
+                var canvas = document.getElementById("canvas");
+                var context = canvas.getContext("2d");
+                context.font = 'bold 40pt Calibri';
+                context.fillStyle = winner.toString();
+                context.fillText(winner + " wins !", 50, 150);
+                state = 0;
+            }
 
+            function draw(board) {
+                var canvas = document.getElementById("canvas");
+                var context = canvas.getContext("2d");
+                context.fillStyle = "#04B431";
+                context.fillRect(0,0,382,328);
+                for(i = 0; i<6; i++) {
+                    for(j = 0; j<7; j++) {
+                        context.beginPath();
+                        context.arc(29+j*54,29+i*54,25,0,2*Math.PI);
+                        context.lineWidth = 3;
+                        context.strokeStyle = '#003300';
+                        if(board != undefined) {
+                            if (board[i][j] == "RED") {
+                                context.fillStyle = 'red';
+                            }
+                            else if (board[i][j] == "BLUE") {
+                                context.fillStyle = 'blue';
+                            } else {
+                                context.fillStyle = 'white';
+                            }
+                        } else {
+                            context.fillStyle = 'white';
+                        }
+                        context.fill();
+                        context.stroke();
+                    }
+                }
+            }
+
+            window.onload = function() {
+                var canvas = document.getElementById("canvas");
+                var context = canvas.getContext("2d");
+                context.font = 'bold 40pt Calibri';
+                context.fillText('Play', 150, 150);
+                var xhr = new XMLHttpRequest();
+                xhr.open("GET", "/game");
+                xhr.send();
+
+                canvas.addEventListener('click', function(event) {
+                    if(state != 0) {
+                        var http = new XMLHttpRequest();
+                        http.open("POST", "/game", true);
+                        http.setRequestHeader("Content-type", "application/json");
+                        http.onreadystatechange = function () {
+                            if (http.readyState == 4 && http.status == 200) {
+                                if(http.responseText != "RED" && http.responseText != "BLUE") {
+                                    draw(JSON.parse(http.responseText));
+                                } else {
+                                    won(http.responseText);
+                                }
+                            }
+                        }
+                        http.send(JSON.stringify({column: (Math.round(event.pageX / 52)).toString()}));
+                    } else {
+                        draw();
+                        state = 1;
+                    }
+                }, false);
+            }
+        </script>
+    </head>
+    <body>
+        <canvas id="canvas" width="382" height="328" style="border:1px solid #000000;">
+        </canvas>
+    </body>
 </html>

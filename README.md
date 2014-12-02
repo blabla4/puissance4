@@ -29,4 +29,4 @@ puissance4
     mvn clean install
     mvn tomcat7:deploy
 
-http://localhost:8080/puissance4-web/
+http://localhost:8080/
